@@ -1,25 +1,30 @@
 <h2>Direct Messges</h2>
 <ul class="heroes">
-  <li *ngFor="let hero of heroes"
+  <li
+    *ngFor="let hero of heroes"
     [class.selected]="hero === selectedHero"
-    (click)="onSelect(hero)">
+    (click)="onSelect(hero)"
+  >
     <span class="badge">{{hero.id}}</span> {{hero.name}}
   </li>
 </ul>
 
 <div *ngIf="selectedHero">
+  <h2>{{selectedHero.name | uppercase}}</h2>
+  <div>
+    <h3>Messages</h3>
+      <p> {{selectedHero.messages}} </p>
 
-  <h2>{{selectedHero.name | uppercase}} </h2>
-  <div>
-    
-  </div>   
-  <div>
-    <label for="message">Message: </label>
-    <input id="message" [(ngModel)]="selectedHero.name" placeholder="Message">
   </div>
+  <div>
+    <!--  <label>Message: </label>
+    <input id="message" [(ngModel)]="selectedHero.messages[-1]" placeholder="Message" /> -->
 
+    <form method="post" target="_self">
+      Message: <input type="text" name="messsage" placeholder="Message"/> <br />
+      <input type="submit" value="Send" />
+      
+    </form>
+
+  </div>
 </div>
-
-
-
-
