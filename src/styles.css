@@ -64,7 +64,10 @@ nav a.active {
   background-color: black;
   color: white;
 }
-
+p{
+  color:green;
+  text-indent: 25px;
+}
 
 /*
 Copyright Google LLC. All Rights Reserved.
