@@ -9,13 +9,17 @@
 
 <div *ngIf="selectedHero">
 
-  <h2>{{selectedHero.name | uppercase}} Details</h2>
-  <div><span>id: </span>{{selectedHero.id}}</div>
+  <h2>{{selectedHero.name | uppercase}} </h2>
   <div>
-    <label for="hero-name">Name: </label>
-    <input id="hero-name" [(ngModel)]="selectedHero.name" placeholder="name">
+    
+  </div>   
+  <div>
+    <label for="message">Message: </label>
+    <input id="message" [(ngModel)]="selectedHero.name" placeholder="Message">
   </div>
 
 </div>
+
+
 
 
